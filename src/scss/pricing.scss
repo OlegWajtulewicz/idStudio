@@ -1,0 +1,102 @@
+.pricing {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 753px;
+    background-color: var(--secondBg);
+    .container {
+        padding: 102px 235px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title-top {
+        margin-bottom: 62px;
+        
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+        padding: 29px 38px;
+        //gap: 54px;  
+        width: 270px;
+        height: 448px;     
+        background: #FDFBF8;
+        border: 2px solid #D3A265;
+        border-radius: 10px; 
+        &:nth-child(2) {
+            background-color: var(--second-color);
+        }
+    }
+    &__title-item {
+        font-family: 'BN Chester Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 23px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__price {
+        font-family: 'BN Chester Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        color: var(--dark-text);
+        margin-bottom: -4px;
+    }
+    &__subtitle {
+        font-family: 'BN Chester Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 17px;
+        color: var(--dark-text);
+        margin-bottom: 9px; 
+    }
+    hr {
+        width: 194px;
+        border: 1px solid #DCD1BB;
+        margin-bottom: 28px; 
+        &:nth-child(2) {
+            color: var(--secondBg);
+        } 
+    }
+    &__descr {
+        list-style-type: none;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 180%;
+        text-align: center;
+        color: var(--dark-text);
+        padding: 0; 
+        margin-bottom: 54px;
+    }
+    &__btn {
+        padding: 12px 29px;
+        width: 141px;
+        height: 48px;
+        border: 2px solid #D3A265;
+        border-radius: 8px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+    }
+}
+.white {
+    color: var(--secondBg);
+    
+}
+.whiteHr {
+    border: 1px solid var(--secondBg) !important;
+}

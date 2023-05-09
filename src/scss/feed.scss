@@ -1,0 +1,135 @@
+.feed {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 693px;
+    background-color: var(--bg-color);
+    .container {
+        padding: 59px 135px;
+    }
+    &__title {
+        letter-spacing: 1px; 
+    }
+    &__item {
+        width: 570px;
+        height: 400px;
+        padding: 40px 43px 36px 91px;
+        background-color: var(--secondBg);
+        position: relative;
+    }
+    &__header {
+        position: absolute;
+        width: 229px;
+        height: 55px;
+        left: 298px;
+        top: 70px;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px; 
+    }
+    &__descr {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 39px;
+        color: #B5B5B5;
+    }
+    hr {
+        position: absolute;
+        width: 570px;
+        height: 0px;
+        left: 0px;
+        top: 129px;
+        border: 1px solid #DCD1BB; 
+        z-index: 0; 
+    }
+    img {
+        position: relative;
+        z-index: 1;
+    }
+    &__icon {
+        font-size: 32px;
+        color: var(--second-color);
+    }
+    &__social {
+        position: absolute;
+        //width: 100px;
+        height: 28px;
+        left: 291px;
+        top: 134px;
+    }
+    &__text {
+        position: absolute;
+        width: 400px;
+        height: 126px;
+        left: 100px;
+        top: 242px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 169%;
+        /* or 27px */
+    }
+}
+.swiper-wrapper {
+    
+    margin: 0 auto;
+
+    position: relative;
+   
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    margin-bottom: 42px;
+}
+
+    
+
+.slider-container {
+    max-width: 1170px;
+    height: 455.88px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-pagination-bullet {
+	
+	margin: 0 15px;
+	background-color: #DFDFDF;
+	opacity: 1;
+    //position: absolute;
+    width: 13.88px;
+    height: 13.88px;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: var(--second-color);
+}
+
+.swiper-pagination {
+    width: 136px;
+    height: 17px;
+    position: relative;
+    //background-color:aquamarine;
+    transition: .3s opacity;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    transform: translateX(-50%);
+    right: -50%;
+    margin: 0;
+}
+
+
+.swiper-container {
+    //width: 100%;
+    max-width: 1170px;
+	padding-bottom: 55.88px;
+    height: 455.88px;
+    
+}

@@ -1,0 +1,88 @@
+.services {
+    background-color: var(--secondBg);
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 669px;
+    padding: 80px 135px;
+    &__title {
+        margin: 0 auto;
+        font-family: 'BN Chester Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: 2px !important;
+        color: var(--dark-text);
+        margin-bottom: 76px;
+        span {
+            color: var(--second-color);
+        }
+    }
+    &__wrapper {
+        width: 1170px;
+        height: 262px;
+        display: flex;
+        gap: 30px;
+        margin-bottom: 84px;
+    }
+    &__item {
+        width: 270px;
+        height: 247.75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 90.12px;
+            height: 89.75px;
+            margin-bottom: 41px;
+        }
+        .decorative {
+            width: 112.12px;
+            height: 82.75px;
+            padding-top: 9px;
+            margin-bottom: 49px;
+        }
+        .space {
+            padding-top: 3px;
+            margin-bottom: 42px;
+        }
+        .project {
+            padding-top: 13px;
+            width: 75.12px;
+        }
+        
+    }
+    &__subtitle {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        font-style: normal;
+        margin-bottom: 16px;
+    }
+    &__descr {
+        font-family: 'Gilroy';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        text-align: center;
+        color: var(--grey);
+        font-style: normal;
+    }
+    &__btn {
+        padding: 12px 32px;
+        margin: 0 auto;
+        width: 223px;
+        height: 48px;
+        border: 2px solid var(--second-color);
+        border-radius: 8px;
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+    }
+}

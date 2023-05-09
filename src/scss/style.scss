@@ -1,0 +1,84 @@
+
+
+@import "fonts";
+@import "iconsfont";
+
+$fontFamily: "Gilroy";
+
+
+
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1152;
+$maxWidthContainer: 856;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@import '_media_mixin.scss';
+@import "bootstrap-reboot.min.scss";
+@import "normalize.scss";
+@import "vars.scss";
+
+
+@import "burger.scss";
+@import "header.scss";
+@import "hero.scss";
+@import "about.scss";
+@import "services.scss";
+@import "portfolio.scss";
+@import "pricing.scss";
+@import "feed.scss";
+@import "order.scss";
+@import "footer.scss";
+
+body {
+	font-family: Gilroy;
+	font-size: 50px;
+	span {
+		color: var(--second-color);
+	}
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+body.lock {
+    overflow: hidden;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #939393;
+    border-radius: 8px;
+    border: 3px solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
+
+
+
+body::-webkit-scrollbar {
+    //width: 13px;
+    height: 13px;
+  }
