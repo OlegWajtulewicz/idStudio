@@ -6,9 +6,13 @@
         max-width: 1440px;
         min-height: 988px;
         padding: 76px 135px;
+        @include _870 {
+            height: 1169px;
+            padding: 47px 0 115px 0;
+        }
     }
     &__wrapper {
-        width: 1170px;
+        max-width: 1170px;
         min-height: 708px;
         margin: 0 auto;
         position: relative;
@@ -21,12 +25,20 @@
             line-height: 20px;
             text-align: right;
             text-decoration-line: underline;
+            @include _870 {
+                top: 970px;
+                transform: translateX(50%);
+                right: 50%;
+                font-size: 14px;
+                line-height: 17px;
+            }
         }
     }
+    
     &__tabs {
         display: flex;
         list-style-type: none;
-        width: 505px;
+        max-width: 505px;
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
@@ -39,7 +51,19 @@
         line-height: 20px;
         margin-bottom: 29px;
         cursor: pointer;
-        
+        @include _979 {
+            column-gap: 5% !important;
+            position: relative;   
+        }
+        @include _870 {
+            margin: 0 auto 48px auto;
+            justify-content: center;
+        }
+        @include _480 {
+            font-size: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
     &__tab {
         transition: all .3s;
@@ -53,18 +77,29 @@
     }
     
     &__content {
-        width: 1170px;
+        max-width: 1170px;
         height: 660px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
         padding: 0px;
         row-gap: 20px;
         column-gap: 30px;
         display: none;
         transition: all .3s;
+        overflow: hidden;
+        @include _1440 {
+            max-height: 950px;
+            row-gap: 18px;
+        }
+        @include _870 {
+            height: 846px;
+
+
+            position: relative;
+        }
         &_active {
-            display: flex;
-            
+            display: flex;   
         }
     }
     &__item {
@@ -72,8 +107,22 @@
         height: 320px;
         border-radius: 10px;
         transition: 0.5s all;
+        object-fit: cover;
+        @include _870 {
+            width: 414px;
+            height: 270px;
+        }
         img {
             object-fit: cover;
+            @include _870 {
+                width: 414px;
+                height: 270px;
+                border-radius: 10px;
+            }
+            @include _480 {
+                width: 100%;
+                border-radius: 0;
+            }
         }
         &:hover {
             box-shadow: 0px 0px 1px rgb(78, 75, 75);
@@ -104,6 +153,12 @@
     padding: 40px;
     border-radius: 8px;
     z-index: 5;
+    @include _1270 {
+        width: 123%;
+    }
+    @include _870 {
+        width: 87%;
+    }
     &__footer {
         position: relative; 
         height: 50px;   
@@ -115,6 +170,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        @include _1270 {
+            justify-content: space-around;
+        }
     }  
     &__close {
         position: absolute;
@@ -155,4 +213,12 @@
         span {
             color: var(--second-color);
         }
+}
+.portfolio__title {  
+    @include _600 {
+        font-size: 32px !important;
+        line-height: 33px;
+        letter-spacing: 0.03em;
+        margin-bottom: 52px;
+    }
 }

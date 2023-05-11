@@ -46,6 +46,7 @@
     }
     &__menu {
         width: 470px;
+        height: 75px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -143,10 +144,11 @@ a {
     }
 }
 .container__menu {
-    opacity: 0;
-    visibility: hidden;
+    //opacity: 0;
+    //visibility: hidden;
+    transition: all .1s;
     @include _767 {
-        top: -120%;
+        //top: -120%;
         transition: all .5s;
         visibility: hidden;
         opacity: 0;

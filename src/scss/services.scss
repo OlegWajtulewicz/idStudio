@@ -4,6 +4,20 @@
     margin: 0 auto;
     height: 669px;
     padding: 80px 135px;
+    @include _1440 {
+        padding: 80px 15px;
+    }
+    @include _979 {
+        //min-height: 700px;
+        height: 100%;
+        padding-top: 56px;
+    }
+    @include _767 {
+        padding-bottom: 0;
+    }
+    @include _600 {
+        height: 1514px;
+    }
     &__title {
         margin: 0 auto;
         font-family: 'BN Chester Pro';
@@ -18,34 +32,101 @@
         span {
             color: var(--second-color);
         }
+        @include _480 {
+            width: 193px;
+            font-size: 32px !important;
+            line-height: 33px !important;
+            text-align: center !important;
+            margin-bottom: 22px !important;
+        }
     }
     &__wrapper {
         width: 1170px;
         height: 262px;
         display: flex;
         gap: 30px;
+        margin: 0 auto;
         margin-bottom: 84px;
+        @include _1270 {
+           gap: 0; 
+           justify-content: space-around;
+           width: 100%;
+        }
+        @include _979 {
+            flex-wrap: wrap;
+            height: 100%;
+            margin-bottom: 0;
+        }
+        @include _480 {
+            height: 1422px;
+        }
     }
     &__item {
+        position: relative;
         width: 270px;
         height: 247.75px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include _1270 {
+            max-width: 270px;
+        }
+        @include _979 {
+            width: 270px;
+            height: 257.75px;
+            margin-bottom: 98px;
+        }
+        @include _480 {
+            width: 270px;
+            height: 257.75px;
+            margin-bottom: 98px;
+            &::after {
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 128%;
+                background-color: #DCD1BB;
+                z-index: 20;
+                bottom: -58px;
+                @include _400 {
+                    width: 100%;
+                }  
+            }
+            &:nth-child(4) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
         img {
             width: 90.12px;
             height: 89.75px;
             margin-bottom: 41px;
+            @include _480 {
+                width: 80.09px;
+                height: 87.75px;
+                margin-bottom: 44px;
+            }
         }
+        
         .decorative {
             width: 112.12px;
             height: 82.75px;
             padding-top: 9px;
             margin-bottom: 49px;
+            @include _480 {
+                width: 102px;
+                height: 81px;
+                padding-top: 16px;
+                margin-bottom: 53px;
+            }
         }
         .space {
             padding-top: 3px;
             margin-bottom: 42px;
+            @include _480 {
+                margin-bottom: 46px;
+            }
         }
         .project {
             padding-top: 13px;
@@ -61,6 +142,11 @@
         text-align: center;
         font-style: normal;
         margin-bottom: 16px;
+        @include _480 {
+            font-size: 16px;
+            line-height: 7px;
+            margin-bottom: 36px;
+        }
     }
     &__descr {
         font-family: 'Gilroy';
@@ -84,5 +170,13 @@
         line-height: 24px;
         display: flex;
         align-items: center;
+        @include _767 {
+            display: none;
+        }
+    }
+}
+.container {
+    @include _480 {
+        height: 1422px;
     }
 }
