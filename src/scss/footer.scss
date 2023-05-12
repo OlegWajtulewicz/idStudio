@@ -5,19 +5,41 @@
     .container {
         max-width: 1440px;
         height: 482px;
-        padding: 69px 135px 95px 137px;
+        padding: 69px 30px 95px 30px;
+        @include _767 {
+            height: 551px;
+            padding: 69px 20% 95px 20%;
+        }
+        @include _600 {
+            padding: 69px 15% 95px 15%;
+        }
+        @include _480 {
+            padding: 69px 30px 95px 30px;
+        }
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         position: relative;
+        max-width: 1170px;
+        margin: 0 auto;
+        @include _767 {
+            //position: relative;
+        }
     }
     &__left {
         width: 300px;
         height: 290px;
+        @include _767 {
+            height: 453px;
+        }
         .logo {
             display: block;
             margin-bottom: 36px;
+            @include _767 {
+                top: -39px;
+                left: 2px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -38,6 +60,9 @@
         font-size: 16px;
         line-height: 170%;
         margin-bottom: 50px;
+        @include _767 {
+            display: none;
+        }
     }
     &__foot {
         font-weight: 400;
@@ -50,7 +75,9 @@
     &__center {
         padding-top: 37px;
         margin-right: 107px;
-
+        @include _979 {
+            margin: 0 auto;
+        }
     }
     &__navigation {
         font-weight: 600;
@@ -59,12 +86,18 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 25px;
+        @include _767 {
+            display: none;
+        }
     }
     &__menu {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         padding-left: 0;
+        @include _767 {
+            display: none;
+        }
         ul {
             list-style-type: none !important; 
             padding-left: 0; 
@@ -84,6 +117,9 @@
         text-transform: uppercase;
         padding-top: 37px;
         margin-bottom: 25px;
+        @include _767 {
+            margin-bottom: 35px;
+        }
     }
     &__social {
         font-size: 32px;
@@ -92,6 +128,11 @@
         align-items: flex-start;
         padding: 0px;
         gap: 8px;
+        @include _767 {
+            position: absolute;
+            top: -24px;
+            right: 3px;
+        }
     }
     &__addr,
     .email,
@@ -106,6 +147,9 @@
         font-size: 14px;
         color: #161616; 
         margin-bottom: 45px;
+        @include _767 {
+            margin-bottom: 30px;
+        }
     }
     &__ress {
         font-weight: 400;
@@ -127,6 +171,11 @@
         align-items: flex-start;
         width: 270px;
         height: 284px;
+        @include _767 {
+            position: absolute;
+            min-width: 260px;
+            margin-top: 44px;
+        }
     }
     &__adres {
         display: flex;
@@ -135,12 +184,16 @@
         padding: 0px;
         gap: 6px;
         margin-bottom: 43px;
+        @include _767 {
+            margin-bottom: 32px;
+        }
         
     }
     &__email {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        
         .email {
             margin-bottom: 8px;
         }

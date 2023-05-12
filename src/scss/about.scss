@@ -12,10 +12,13 @@
     }
     @include _767 {
         padding: 60px 30px 37px 30px;
-        max-height: 450px;
+        max-height: 470px;
+    }
+    @include _600 {
+        height: 470px;
     }
     @include _400 {
-        min-height: 515px;
+        min-height: 540px;
         padding-right: 20px;
     }
     .container {

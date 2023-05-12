@@ -128,7 +128,7 @@ valideForms('#consultation form');
 valideForms('#order form');
 
 
-// валидация тел
+///валидация тел
 $('input[name=phone]').mask("(999) 999-9999");
 
 // отправка писем
