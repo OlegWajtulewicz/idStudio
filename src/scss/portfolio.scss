@@ -148,7 +148,7 @@
     left: 50%;
     transform: translate(-50%, -40%);
     width: 1270px;
-    height: 150%;
+    height: 120%;
     background-color: #f0f0f0e1;
     padding: 40px;
     border-radius: 8px;
@@ -215,10 +215,13 @@
         }
 }
 .portfolio__title {  
+    @include _870 {
+        margin-bottom: 52px;
+    }
     @include _600 {
         font-size: 32px !important;
         line-height: 33px;
         letter-spacing: 0.03em;
-        margin-bottom: 52px;
+        
     }
 }

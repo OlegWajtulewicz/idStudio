@@ -3,15 +3,43 @@
     margin: 0 auto;
     height: 753px;
     background-color: var(--secondBg);
+    @include _979 {
+        height: 1233px;    
+    }
+    @include _600 {
+        height: 1215px;
+    }
     .container {
-        padding: 102px 235px;
+        padding: 102px 30px;
+        @include _979 {
+            padding: 102px 92px;
+        }
+        @include _767 {
+            padding: 56px 92px;
+        }
+        @include _480 {
+            padding: 56px 30px;
+        }   
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        max-width: 970px;
+        margin: 0 auto;
+        @include _979 {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
     }
     &__title-top {
         margin-bottom: 62px;
+        @include _767 {
+            font-size: 32px;
+            line-height: 33px;
+            letter-spacing: 0.05em;
+            margin-bottom: 60px;
+        }
         
     }
     &__item {
@@ -24,10 +52,17 @@
         width: 270px;
         height: 448px;     
         background: #FDFBF8;
-        border: 2px solid #D3A265;
+        border: 2px solid var(--second-color);
         border-radius: 10px; 
         &:nth-child(2) {
             background-color: var(--second-color);
+        }
+        @include _767 {
+            position: relative;
+            width: 270px;
+            height: 324px;
+            padding: 24px 38px;
+            overflow: hidden;
         }
     }
     &__title-item {
@@ -38,6 +73,11 @@
         line-height: 23px;
         text-align: center;
         margin-bottom: 16px;
+        @include _767 {
+            font-size: 20px;
+            line-height: 19px;
+            margin-bottom: 70px;
+        }
     }
     &__price {
         font-family: 'BN Chester Pro';
@@ -46,6 +86,13 @@
         font-size: 46px;
         color: var(--dark-text);
         margin-bottom: -4px;
+        @include _767 {
+            font-size: 28px;
+            line-height: 27px;
+            position: absolute;
+            left: 66px;
+            top: 71px;
+        }
     }
     &__subtitle {
         font-family: 'BN Chester Pro';
@@ -55,6 +102,14 @@
         line-height: 17px;
         color: var(--dark-text);
         margin-bottom: 9px; 
+        @include _767 {
+            font-size: 16px;
+            line-height: 16px;
+            position: absolute;
+            left: 125px;
+            top: 81px;
+            color: #BBBBBB;
+        }
     }
     hr {
         width: 194px;
@@ -63,6 +118,9 @@
         &:nth-child(2) {
             color: var(--secondBg);
         } 
+        @include _767 {
+            margin-bottom: 23px;
+        }
     }
     &__descr {
         list-style-type: none;
@@ -75,12 +133,16 @@
         color: var(--dark-text);
         padding: 0; 
         margin-bottom: 54px;
+        @include _767 {
+            font-size: 14px;
+            line-height: 178%;
+        }
     }
     &__btn {
         padding: 12px 29px;
         width: 141px;
         height: 48px;
-        border: 2px solid #D3A265;
+        border: 2px solid var(--second-color);
         border-radius: 8px;
         font-family: 'Gilroy';
         font-style: normal;
@@ -90,6 +152,20 @@
         display: flex;
         align-items: center;
         text-transform: uppercase;
+        @include _767 {
+            position: absolute;
+            width: 266px;
+            height: 40.36px;
+            left: 0px;
+            top: 280.64px;
+            border: none;
+            background: var(--second-color);
+            border-radius: 0;
+            font-size: 16px;
+            color: #FFFFFF;
+            padding-left: 95px;
+            border-top: 1px solid #FDFBF8;
+        }
 
     }
 }

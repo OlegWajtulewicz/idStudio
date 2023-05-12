@@ -6,6 +6,9 @@ flsFunctions.isWebp();
 import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper();
 */
+
+
+
 //tabs-galery
 $('ul.portfolio__tabs').on('click', 'li:not(.portfolio__tab_active)', function() {
     $(this)
@@ -90,30 +93,7 @@ scrollOffElements.forEach(function(scrollOffElement) {
 });
 
 
-/////slider ////////////////////////////////
-const slider = document.querySelector('.swiper-container');
 
-let mySwiper = new Swiper(slider, {
-	slidesPerView: 2,
-	spaceBetween: 30,
-	loop: true,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	// autoplay: {
-	// 	delay: 5000,
-	// },
-
-	breakpoints: {
-		1025: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 1,
-		}
-	}
-})
 
 
 function valideForms(form) {
@@ -263,4 +243,27 @@ const accordion1 = new GraphAccordion('.accordion', {
           });
 
 
-          
+/////slider ////////////////////////////////
+const slider = document.querySelector('.swiper-container');
+
+let mySwiper = new Swiper(slider, {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	// autoplay: {
+	// 	delay: 5000,
+	// },
+
+	breakpoints: {
+		1025: {
+			slidesPerView: 1,
+		},
+		// 768: {
+		// 	slidesPerView: 0,
+		// }
+	}
+});          
