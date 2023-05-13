@@ -6,6 +6,9 @@
     @include _600 {
         height: 618px;
     }
+    @include _350 {
+        height: 660px;
+    }
     .container {
         padding: 59px 30px;
         height: 100%;
@@ -25,6 +28,7 @@
         padding: 40px 43px 36px 91px;
         background-color: var(--secondBg);
         position: relative;
+        overflow: hidden;
         @include _1270 {
             max-width: 570px;
         }
@@ -41,7 +45,7 @@
     }
     &__header {
         position: absolute;
-        width: 229px;
+        width: 100%;
         height: 55px;
         left: 298px;
         top: 70px;
@@ -96,6 +100,12 @@
     &__icon {
         font-size: 32px;
         color: var(--second-color);
+        path {
+            &:hover {
+                transition: all .5s;
+                box-shadow: 0px 0px 8px var(--second-color);   
+            }
+        }
     }
     &__social {
         position: absolute;
@@ -106,6 +116,9 @@
         @include _600 {
             left: 164px;
             top: 83px;
+        }
+        @include _350 {
+            width: 90%;
         }
     }
     &__text {
@@ -126,6 +139,9 @@
             left: 24px;
             top: 190px;
             line-height: 170%; 
+        }
+        @include _350 {
+            width: 100%;
         }
     }
 }

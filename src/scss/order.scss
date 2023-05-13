@@ -53,7 +53,10 @@
         text-transform: uppercase;
         text-align: center;
         justify-content: center;
-        
+        &:hover {
+            box-shadow: 0px 0px 8px var(--second-color);
+            transition: all .5s;
+        }
         @include _767 {
             margin-top: 12px;
         }
@@ -90,6 +93,7 @@
     background-color: var(--bg-color);
     padding: 40px;
     border-radius: 8px;
+    z-index: 1111;
     @include _400 {
         width: 100%;
     }
@@ -101,14 +105,6 @@
         line-height: 21px;
         color: #878787;
         cursor: pointer;
-        // @include _480 {
-        //     top: -25px;
-        //     right: 0px;
-        // }
-        // @include _350 {
-        //     top: -25px;
-        //     right: 20px;
-        // }
     }
     &__subtitle {
         color: #0d0d0d;
@@ -181,6 +177,10 @@
         text-transform: uppercase;
         margin: 0 auto;
         text-align: center;
+        &:hover {
+            box-shadow: 0px 0px 8px var(--second-color);
+            transition: all .5s;
+        }
         &-buy {
             padding: 12px 29px;
             width: 141px;
@@ -195,8 +195,11 @@
             align-items: center;
             text-transform: uppercase;
             height: 48px;
-            margin: 0 auto;
-            
+            margin: 0 auto; 
+            &:hover {
+                box-shadow: 0px 0px 8px var(--second-color);
+                transition: all .5s;
+            } 
         }
 }
 

@@ -36,58 +36,22 @@ $('[data-modal=galery]').on('click', function() {
   
   $('.pricing__btn').each(function(i) {
     $(this).on('click', function() {
-      //$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
     })
   });
 
+///body.lock--modal
 
-///scrollOnOff
-//   const body = document.querySelector('body');
-//   const modal = document.querySelector('.scroll-off');
-//   const close = document.querySelector('.scroll-on');
-//   const start = document.querySelector('.start-off');
-//   const consalt = document.querySelector('.consalt-off');
-//   const closeModal = document.querySelector('.modal__close');
-
-//   modal.addEventListener('click', () => {
-//     body.classList.add('lock');
-// }); 
-// start.addEventListener('click', () => {
-//   body.classList.add('lock');
-// }); 
-// consalt.addEventListener('click', () => {
-//   body.classList.add('lock');
-// }); 
-
-// close.addEventListener('click', () => {
-//     body.classList.remove('lock');
-// });
-// closeModal.addEventListener('click', () => {
-//   body.classList.remove('lock');
-// });
-
-// Находим все элементы с классом "scroll-off"
 const scrollOffElements = document.querySelectorAll('.scroll-off');
-
-// Функция-обработчик клика на элементах "scroll-off"
 function handleClick(event) {
-  // Добавляем класс "lock" к элементу <body>
   document.body.classList.add('lock');
-  
-  // Находим все элементы, на которые можно кликнуть, чтобы убрать класс "lock"
   const closeElements = document.querySelectorAll('.modal-close, .scroll-on');
-  
-  // Добавляем обработчик клика для каждого такого элемента
   closeElements.forEach(function(closeElement) {
     closeElement.addEventListener('click', function() {
-      // Убираем класс "lock" у элемента <body>
       document.body.classList.remove('lock');
     });
   });
 }
-
-// Добавляем обработчик клика для каждого элемента "scroll-off"
 scrollOffElements.forEach(function(scrollOffElement) {
   scrollOffElement.addEventListener('click', handleClick);
 });
@@ -128,10 +92,8 @@ valideForms('#consultation form');
 valideForms('#order form');
 
 
-///валидация тел
 $('input[name=phone]').mask("(999) 999-9999");
 
-// отправка писем
 $('form').submit(function(e) {
   e.preventDefault();
 
@@ -155,8 +117,8 @@ $('form').submit(function(e) {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.menu'),
-        menuCont = document.querySelector('.container__menu'),
+  const menu = document.querySelector('.menuAcc'),
+        menuCont = document.querySelector('.container__menuAcc'),
         menuItem = document.querySelectorAll('.menu__link'),
         burger = document.querySelector('.burger'),
         phone = document.querySelector('.header__phone'),
@@ -266,4 +228,55 @@ let mySwiper = new Swiper(slider, {
 		// 	slidesPerView: 0,
 		// }
 	}
-});          
+});   
+
+
+///scrollUp
+
+const btnUp = {
+	el: document.querySelector('.btn-up'),
+	scrolling: false,
+	show() {
+	  if (this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+		this.el.classList.remove('btn-up_hide');
+		this.el.classList.add('btn-up_hiding');
+		window.setTimeout(() => {
+		  this.el.classList.remove('btn-up_hiding');
+		}, 300);
+	  }
+	},
+	hide() {
+	  if (!this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+		this.el.classList.add('btn-up_hiding');
+		window.setTimeout(() => {
+		  this.el.classList.add('btn-up_hide');
+		  this.el.classList.remove('btn-up_hiding');
+		}, 300);
+	  }
+	},
+	addEventListener() {
+	  window.addEventListener('scroll', () => {
+		const scrollY = window.scrollY || document.documentElement.scrollTop;
+		if (this.scrolling && scrollY > 0) {
+		  return;
+		}
+		this.scrolling = false;
+		if (scrollY > 500) {
+		  this.show();
+		} else {
+		  this.hide();
+		}
+	  });
+	  document.querySelector('.btn-up').onclick = () => {
+		this.scrolling = true;
+		this.hide();
+		window.scrollTo({
+		  top: 0,
+		  left: 0,
+		  behavior: 'smooth'
+		});
+	  }
+	}
+  }
+
+  btnUp.addEventListener();  

@@ -171,6 +171,10 @@
         line-height: 24px;
         display: flex;
         align-items: center;
+        &:hover {
+            box-shadow: 0px 0px 8px var(--second-color);
+            transition: all .5s;
+        }
         @include _767 {
             display: none;
         }

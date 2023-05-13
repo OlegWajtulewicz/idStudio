@@ -128,17 +128,10 @@
         line-height: 24px;
         text-transform: uppercase;
         margin-right: 0;
-        // @include _767 {
-        //     width: 353px;
-        //     height: 44px;
-        //     text-align: center;
-        //     justify-content: center;
-        //     position: absolute;
-        //     transform: translateX(-50%);
-        //     left: 50%;
-        //     bottom: -120%;
-
-        // }
+        &:hover {
+            box-shadow: 0px 0px 8px var(--second-color);
+            transition: all .5s;
+        }
         @include _480 {
             width: 353px;
             height: 44px;

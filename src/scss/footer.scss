@@ -108,6 +108,11 @@
             width: 83px;
             height: 165px;
             margin-bottom: 35px;
+            &:hover {
+                transition: all .5s;
+                //text-shadow: 0px 0px 2px var(--second-color); 
+                color: var(--grey);  
+            }
         }
     }
     &__contacts {
@@ -133,6 +138,17 @@
             top: -24px;
             right: 3px;
         }
+    &__icon {
+        svg {
+            color: var(--second-color);
+            &:hover {
+                transition: all .5s;
+                text-shadow: 0px 0px 2px var(--second-color); 
+                color: var(--second-color);  
+            }
+        }
+        
+    }    
     }
     &__addr,
     .email,
@@ -163,7 +179,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        color: #161616;
+        color: var(--dark-text);
     }
     &__right {
         display: flex;
@@ -203,4 +219,50 @@
             margin-bottom: -33px;
         }
     }
-}         
+}  
+
+.btn-up {
+    position: fixed;
+    background-color: rgba(199, 199, 199, 0.26);
+    right: 30px;
+    bottom: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+    color: #757571;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    z-index: 14;
+    transform: translateY(0);
+    @include _480 {
+        right: 10px;
+    }
+  }
+
+  .btn-up_hide {
+        display: none;
+  }
+
+  .btn-up_hiding {
+        opacity: 0;
+        transform: translateY(100px);
+  }
+
+  .btn-up-icon {
+        width: 40px;
+        height: 40px;
+        fill: currentcolor;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        color: #212529;
+        transition: all .5s;
+    }
+  }
+
