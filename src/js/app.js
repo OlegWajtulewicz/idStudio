@@ -280,3 +280,36 @@ const btnUp = {
   }
 
   btnUp.addEventListener();  
+
+
+  AOS.init({
+    disable: 'phone',
+    mirror: false,
+    once: true
+  });
+
+
+ ////changeLang
+ const changeL = document.querySelector('.change-lang');
+ const allLang = ['en', 'ru', 'pl'];
+ const urls = {
+   pl: 'https://vaitulevichaleh.com/idstudio.pl',
+   ru: 'https://vaitulevichaleh.com/idstudio.ru',
+   en: 'https://vaitulevichaleh.com/idstudio',
+ };
+
+ changeL.onchange = function() {
+   console.log(this.value);
+   const lang = this.value;
+   if (urls[lang]) { 
+     window.location.href = urls[lang]; 
+     localStorage.setItem('lang', this.value);
+   } 
+ }
+ if (localStorage.getItem('lang') == 'en') {
+   changeL.value = 'en';
+ } else if (localStorage.getItem('lang') == 'ru') {
+   changeL.value = 'ru';
+ } else if (localStorage.getItem('lang') == 'pl') {
+   changeL.value = 'pl';
+ };
