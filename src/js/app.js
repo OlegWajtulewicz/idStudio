@@ -7,7 +7,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper();
 */
 
-
+//////////////////////////////////////////////////////////////////////////////////////
 
 //tabs-galery
 $('ul.portfolio__tabs').on('click', 'li:not(.portfolio__tab_active)', function() {
@@ -16,7 +16,7 @@ $('ul.portfolio__tabs').on('click', 'li:not(.portfolio__tab_active)', function()
       .closest('div.portfolio__wrapper').find('div.portfolio__content').removeClass('portfolio__content_active').eq($(this).index()).addClass('portfolio__content_active');
   });
 
-          //modal-galery
+          //modal-galery//////////////////////////////////////////////////////////////
 
 $('[data-modal=galery]').on('click', function() {
     $('.overlay-moda, #galery').fadeIn('slow');
@@ -25,7 +25,7 @@ $('[data-modal=galery]').on('click', function() {
     $('.overlay-moda, #galery').fadeOut('slow');
   });
 
-  //modal
+  //modal//////////////////////////////////////////////////
   $('[data-modal=consultation]').on('click', function() {
     $('.overlay, #consultation').fadeIn('slow');
   });
@@ -40,7 +40,7 @@ $('[data-modal=galery]').on('click', function() {
     })
   });
 
-///body.lock--modal
+///body.lock--modal//////////////////////////////////////////////////////////////
 
 const scrollOffElements = document.querySelectorAll('.scroll-off');
 function handleClick(event) {
@@ -58,7 +58,7 @@ scrollOffElements.forEach(function(scrollOffElement) {
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////
 
 function valideForms(form) {
   $(form).validate({
@@ -91,9 +91,9 @@ function valideForms(form) {
 valideForms('#consultation form');
 valideForms('#order form');
 
-
+/////////////////////////
 $('input[name=phone]').mask("(999) 999-9999");
-
+/////////////////////
 $('form').submit(function(e) {
   e.preventDefault();
 
@@ -115,6 +115,7 @@ $('form').submit(function(e) {
   return false; 
 });
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 window.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.menuAcc'),
@@ -145,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////
           class GraphAccordion {
 	constructor(selector, options) {
 		let defaultOptions = {
@@ -205,33 +206,8 @@ const accordion1 = new GraphAccordion('.accordion', {
           });
 
 
-/////slider ////////////////////////////////
-const slider = document.querySelector('.swiper-container');
 
-let mySwiper = new Swiper(slider, {
-	slidesPerView: 1,
-	spaceBetween: 30,
-	loop: true,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	// autoplay: {
-	// 	delay: 5000,
-	// },
-
-	breakpoints: {
-		1025: {
-			slidesPerView: 1,
-		},
-		// 768: {
-		// 	slidesPerView: 0,
-		// }
-	}
-});   
-
-
-///scrollUp
+///scrollUp///////////////////////////////////////////////////////
 
 const btnUp = {
 	el: document.querySelector('.btn-up'),
@@ -289,7 +265,8 @@ const btnUp = {
   });
 
 
- ////changeLang
+ ////changeLang/////////////////////////////////////////////////////////////////
+
  const changeL = document.querySelector('.change-lang');
  const allLang = ['en', 'ru', 'pl'];
  const urls = {
@@ -313,3 +290,29 @@ const btnUp = {
  } else if (localStorage.getItem('lang') == 'pl') {
    changeL.value = 'pl';
  };
+
+ ////////////////////////////////////////////////////////////////////////////////////
+
+
+ $(document).ready(function(){
+  $('.carousel').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+  //speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }, 
+  ]
+  });
+});

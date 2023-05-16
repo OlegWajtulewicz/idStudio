@@ -1948,6 +1948,7 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 @media (max-width: 870px) {
   .modal1 {
     width: 87%;
+    height: 75%;
   }
 }
 .modal1__footer {
@@ -1971,6 +1972,13 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
   position: absolute;
   bottom: -12px;
   right: -3px;
+}
+@media (max-width: 870px) {
+  .modal1__close {
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
+  }
 }
 
 #galery {
@@ -2250,7 +2258,7 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 }
 @media (max-width: 600px) {
   .feed {
-    height: 618px;
+    height: 630px;
   }
 }
 @media (max-width: 350px) {
@@ -2280,15 +2288,13 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
   background-color: var(--secondBg);
   position: relative;
   overflow: hidden;
+  margin: 0 15px 55px 15px;
+  object-fit: cover;
 }
 @media (max-width: 1270px) {
   .feed__item {
     max-width: 570px;
-  }
-}
-@media (max-width: 1170px) {
-  .feed__item {
-    margin: 0 auto;
+    padding-left: 70px;
   }
 }
 @media (max-width: 600px) {
@@ -2383,9 +2389,11 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     top: 83px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .feed__social {
     width: 90%;
+    left: 111px;
+    top: 125px;
   }
 }
 .feed__text {
@@ -2400,6 +2408,11 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
   font-size: 16px;
   line-height: 169%;
 }
+@media (max-width: 1270px) {
+  .feed__text {
+    left: 75px;
+  }
+}
 @media (max-width: 600px) {
   .feed__text {
     width: 90%;
@@ -2409,83 +2422,96 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     line-height: 170%;
   }
 }
+@media (max-width: 400px) {
+  .feed__text {
+    font-size: 14px;
+  }
+}
 @media (max-width: 350px) {
   .feed__text {
     width: 100%;
   }
 }
 
-.swiper-wrapper {
+.carousel {
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  width: 1170px;
   height: 100%;
   z-index: 1;
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
   margin-bottom: 42px;
+  object-fit: cover;
+}
+@media (max-width: 1170px) {
+  .carousel {
+    width: 600px;
+  }
 }
 @media (max-width: 600px) {
-  .swiper-wrapper {
-    margin-bottom: 24px;
+  .carousel {
+    width: 100%;
   }
 }
 
 .slider-container {
-  max-width: 1170px;
-  height: 455.88px;
+  width: 1170px;
+  height: 455px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
 }
-
-.swiper-pagination-bullet {
-  margin: 0 15px;
-  background-color: #DFDFDF;
-  opacity: 1;
-  width: 13.88px;
-  height: 13.88px;
-  border-radius: 100%;
-  margin: 0 10px;
+@media (max-width: 1170px) {
+  .slider-container {
+    width: 100%;
+  }
 }
 
-.swiper-pagination-bullet-active {
-  background-color: var(--second-color);
-}
-
-.swiper-pagination {
-  width: 136px !important;
-  height: 17px;
-  position: relative;
-  transition: 0.3s opacity;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-  transform: translateX(-50%);
-  left: 49%;
-  right: -50%;
-  margin: 0;
-}
-
-.swiper-container {
-  max-width: 1170px;
-  padding-bottom: 55.88px;
-  height: 455.88px;
-}
-
-.swiper-slide {
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
+.slick-slide {
+  float: left;
+  height: 400px;
   position: relative;
   transition-property: transform;
 }
-@media (max-width: 1170px) {
-  .swiper-slide {
-    flex-shrink: 0;
-  }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-dots {
+  width: 136px !important;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: -29px;
+  transform: translateX(50%);
+  right: 49%;
+  list-style-type: none;
+  padding: 0;
+  border: none;
+}
+.slick-dots button {
+  font-size: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #DFDFDF;
+  margin-right: 14px;
+  padding: 0;
+}
+
+.slick-active button {
+  border: none;
+  background-color: var(--second-color);
 }
 
 .order {

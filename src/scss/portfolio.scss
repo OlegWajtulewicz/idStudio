@@ -163,6 +163,7 @@
     }
     @include _870 {
         width: 87%;
+        height: 75%;
     }
     &__footer {
         position: relative; 
@@ -183,6 +184,11 @@
         position: absolute;
         bottom: -12px;
         right: -3px;
+        @include _870 {
+            bottom: 0;
+            transform: translateX(50%);
+            right: 50%;
+        }
     }  
 }
 
