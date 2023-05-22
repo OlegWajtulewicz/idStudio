@@ -23,8 +23,9 @@
 	<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230522145409" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css?_v=20230522145409">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230522145409">
 	<title>idstudio</title>
 </head>
 	<body>
@@ -59,9 +60,9 @@
         <div class="header__phone">
             <a class="contacts__phone-top" href="tel:+3035550105">(303) 555-0105</a>
             <select class="change-lang">
+                <option value="en" selected>EN</option>
                 <option value="pl">PL</option>
                 <option value="ru">RU</option>
-                <option value="en" selected>EN</option>
             </select> 
         </div>
 
@@ -93,25 +94,30 @@
         <img src="img/About Studio.png" alt="title" data-aos="flip-up">
         <div class="about__text">
             Interiart is an award-winning architecture and interior design practice based in NYC. We work internationally on projects of residential & commercial interior design that require a creative approach. Our talented and experienced designers leverage their knowledge and expertise to create unique and comfortable interiors for you.
+
+
 <br><br>                                                                             
 Our team knows that interior design can be stressful for the client and we do our best to make it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we make it exciting and enjoyable for our clients.
         </div>
             <!-- media -->
         <div class="about__text-min">
-            Interiart is an award-winning architecture and interior design practice based in NYC. We work internationally on projects of residential & commercial interior design that require a creative approach. Our talented and experienced designers leverage their knowledge and expertise to create unique and comfortable interiors for you. 
+            Interiart is an award-winning architecture and interior design practice based in NYC. We work internationally on projects of residential & commercial interior design that require a creative approach. Our talented and experienced designers leverage their knowledge and expertise to create unique and comfortable interiors for you.
         </div>
-
-            <!-- accordion -->
-        <div class="about__text-accordion accordion">
-            <button class="about__btn" aria-expanded="false">READ MORE</button>
-            <hr>
-            <div class="about__content" aria-hidden="true">
-                Our team knows that interior design can be stressful for the client and we do our best to make it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we make it exciting and enjoyable for our clients.
-            </div>
-        </div>
-
-
     </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                READ MORE
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body ">Our team knows that interior design can be stressful for the client and we do our best to make it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we make it exciting and enjoyable for our clients.</div>
+          </div>
+        </div>
+    </div>
+
 </section>
 			<section class="services" id="services">
     <div class="container">
@@ -119,26 +125,26 @@ Our team knows that interior design can be stressful for the client and we do ou
         <div class="services__wrapper">
 
         <div class="services__item">
-            <img src="img/icon1.png" alt="interior">
+            <picture><source srcset="img/icon1.webp" type="image/webp"><img src="img/icon1.png" alt="interior"></picture>
             <div class="services__subtitle">INTERIOR DESIGN</div>
             <div class="services__descr">Interior design services offer a vast variety of solutions for our clients’ homes and offices</div>
         </div>
 
         <div class="services__item">
-            <img class="decorative" src="img/icon.png" alt="interior">
+            <picture><source srcset="img/icon.webp" type="image/webp"><img class="decorative" src="img/icon.png" alt="interior"></picture>
             <div class="services__subtitle">DECORATIVE SERVICES</div>
             <div class="services__descr">Our professional decorators will be happy to help you change your house’s inner look.
             </div>
         </div>
 
         <div class="services__item">
-            <img class="space" src="img/icon3.png" alt="interior">
+            <picture><source srcset="img/icon3.webp" type="image/webp"><img class="space" src="img/icon3.png" alt="interior"></picture>
             <div class="services__subtitle">SPACE PLANNING</div>
             <div class="services__descr">We create better interior experiences through our space planning services.</div>
         </div>
 
         <div class="services__item">
-            <img class="project" src="img/icon4.png" alt="interior">
+            <picture><source srcset="img/icon4.webp" type="image/webp"><img class="project" src="img/icon4.png" alt="interior"></picture>
             <div class="services__subtitle">PROJECT MANAGEMENT</div>
             <div class="services__descr">We provide proper project management as it’s one of the main success factors in interior design.</div>
         </div>
@@ -161,35 +167,35 @@ Our team knows that interior design can be stressful for the client and we do ou
                 <li class="portfolio__tab"><div>COMERCIAL</div></li>
                 <li class="portfolio__tab"><div>RESIDENTIAL</div></li>
                 <li class="portfolio__tab"><div>OFFICE</div></li>
-                <li class="portfolio__tab"><div>OFFICE</div></li>
+                <li class="portfolio__tab"><div>OTHER</div></li>
               </ul> 
-              <a href="#galery" data-modal="galery" class="scroll-off">VIEW MORE</a>
+              <a href="#galery" data-modal="galery" >VIEW MORE</a>
 
               <div class="portfolio__content portfolio__content_active">
 
                 <div class="portfolio__item">
-                    <img src="img/portfolio/1.png" alt="1">
+                    <picture><source srcset="img/portfolio/1.webp" type="image/webp"><img src="img/portfolio/1.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/2.png" alt="1">
+                    <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/3.png" alt="1">
+                    <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/6.png" alt="1">
+                    <picture><source srcset="img/portfolio/6.webp" type="image/webp"><img src="img/portfolio/6.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/7.png" alt="1">
+                    <picture><source srcset="img/portfolio/7.webp" type="image/webp"><img src="img/portfolio/7.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/8.png" alt="1">
+                    <picture><source srcset="img/portfolio/8.webp" type="image/webp"><img src="img/portfolio/8.png" alt="1"></picture>
                 </div>
 
 
@@ -197,134 +203,173 @@ Our team knows that interior design can be stressful for the client and we do ou
 
               <div class="portfolio__content">
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 
                 <div class="portfolio__item">
-                    <img src="img/portfolio/1.png" alt="1">
+                    <picture><source srcset="img/portfolio/1.webp" type="image/webp"><img src="img/portfolio/1.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/2.png" alt="1">
+                    <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/3.png" alt="1">
+                    <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
 
 
               </div>
               <div class="portfolio__content"> 
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/2.png" alt="1">
+                    <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/3.png" alt="1">
+                    <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
 
               </div>
               <div class="portfolio__content">
 
                 <div class="portfolio__item">
-                    <img src="img/portfolio/2.png" alt="1">
+                    <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/3.png" alt="1">
+                    <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
 
               </div>
               <div class="portfolio__content">
 
                 <div class="portfolio__item">
-                    <img src="img/portfolio/7.png" alt="1">
+                    <picture><source srcset="img/portfolio/7.webp" type="image/webp"><img src="img/portfolio/7.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/3.png" alt="1">
+                    <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/4.png" alt="1">
+                    <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="1"></picture>
                 </div>
                 <div class="portfolio__item">
-                    <img src="img/portfolio/5.png" alt="1">
+                    <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="1"></picture>
                 </div>
 
               </div>
 
-              
+
 
                 <div class="modal1" id="galery">
-                    <h5 class="modal1__title ">Galery</h5>
-            <hr>    
+                    
+               
                     <div class="modal1-body">
+
+
                         <div class="portfolio__item">
-                            <img src="img/portfolio/1.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/1.png">
+                                <picture><source srcset="img/portfolio/1.webp" type="image/webp"><img src="img/portfolio/1.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/2.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/2.png">
+                                <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/3.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/3.png">
+                                <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/4.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/4.png">
+                                <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/5.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/5.png">
+                                <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/3.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/6.png">
+                                <picture><source srcset="img/portfolio/6.webp" type="image/webp"><img src="img/portfolio/6.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/4.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/7.png">
+                                <picture><source srcset="img/portfolio/7.webp" type="image/webp"><img src="img/portfolio/7.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/5.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/8.png">
+                                <picture><source srcset="img/portfolio/8.webp" type="image/webp"><img src="img/portfolio/8.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/6.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/1.png">
+                                <picture><source srcset="img/portfolio/1.webp" type="image/webp"><img src="img/portfolio/1.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/7.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/2.png">
+                                <picture><source srcset="img/portfolio/2.webp" type="image/webp"><img src="img/portfolio/2.png" alt="image"></picture>
+                            </a>
                         </div>
                         <div class="portfolio__item">
-                            <img src="img/portfolio/8.png" alt="1">
+                            <a data-fslightbox="gal" href="img/portfolio/3.png">
+                                <picture><source srcset="img/portfolio/3.webp" type="image/webp"><img src="img/portfolio/3.png" alt="image"></picture>
+                            </a>
                         </div>
+                        <div class="portfolio__item">
+                            <a data-fslightbox="gal" href="img/portfolio/4.png">
+                                <picture><source srcset="img/portfolio/4.webp" type="image/webp"><img src="img/portfolio/4.png" alt="image"></picture>
+                            </a>
+                        </div>
+                        <div class="portfolio__item">
+                            <a data-fslightbox="gal" href="img/portfolio/5.png">
+                                <picture><source srcset="img/portfolio/5.webp" type="image/webp"><img src="img/portfolio/5.png" alt="image"></picture>
+                            </a>
+                        </div>
+                        
+
+
                     </div>
-                    <div class="modal1__footer">
-                        <hr>
-                        <button class="modal1__close main-btn scroll-on">Close</button>
+
+
+                    <div class="modal1__footer"> 
+                        <button class="modal1__close main-btn scroll-on">Закрыть</button>
                     </div>
                        
              
                 </div>
+
         
             </div>
 
@@ -391,7 +436,7 @@ Our team knows that interior design can be stressful for the client and we do ou
                 <div class="carousel">
 
                         <div class="feed__item">
-                          <img src="img/portfolio/img1.png" alt="anna">
+                          <picture><source srcset="img/portfolio/img1.webp" type="image/webp"><img src="img/portfolio/img1.png" alt="anna"></picture>
                           <div class="feed__header">
                             <div class="feed__name">Annette Black</div>
                             <div class="feed__descr">Merchandising Associate</div>
@@ -420,7 +465,7 @@ Our team knows that interior design can be stressful for the client and we do ou
                         </div>
                     
                         <div class="feed__item">
-                            <img src="img/portfolio/img2.png" alt="anna">
+                            <picture><source srcset="img/portfolio/img2.webp" type="image/webp"><img src="img/portfolio/img2.png" alt="anna"></picture>
                             <div class="feed__header">
                               <div class="feed__name">Marvin McKinney</div>
                               <div class="feed__descr">Administrator</div>
@@ -449,7 +494,7 @@ Our team knows that interior design can be stressful for the client and we do ou
                            </div>
                    
                         <div class="feed__item">
-                            <img src="img/portfolio/img1.png" alt="anna">
+                            <picture><source srcset="img/portfolio/img1.webp" type="image/webp"><img src="img/portfolio/img1.png" alt="anna"></picture>
                             <div class="feed__header">
                               <div class="feed__name">Annette Black</div>
                               <div class="feed__descr">Merchandising Associate</div>
@@ -478,7 +523,7 @@ Our team knows that interior design can be stressful for the client and we do ou
                           </div>
                     
                         <div class="feed__item">
-                             <img src="img/portfolio/img2.png" alt="anna">
+                             <picture><source srcset="img/portfolio/img2.webp" type="image/webp"><img src="img/portfolio/img2.png" alt="anna"></picture>
                             <div class="feed__header">
                               <div class="feed__name">Marvin McKinney</div>
                               <div class="feed__descr">Administrator</div>
@@ -645,15 +690,17 @@ Our team knows that interior design can be stressful for the client and we do ou
 </footer>
 
 		
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230522145409" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js?_v=20230522145409"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js?_v=20230522145409" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js?_v=20230522145409"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js?_v=20230522145409"></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js?_v=20230522145409" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="js/app.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230522145409"></script>
+		<script src="js/slick.min.js?_v=20230522145409"></script>
+		<script src="js/fslightbox.js?_v=20230522145409"></script>
+		<script src="js/app.min.js?_v=20230522145409"></script>
 	</body>
 </html>

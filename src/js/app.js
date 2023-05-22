@@ -18,12 +18,12 @@ $('ul.portfolio__tabs').on('click', 'li:not(.portfolio__tab_active)', function()
 
           //modal-galery//////////////////////////////////////////////////////////////
 
-$('[data-modal=galery]').on('click', function() {
-    $('.overlay-moda, #galery').fadeIn('slow');
-  });
-  $('.modal1__close').on('click', function() {
-    $('.overlay-moda, #galery').fadeOut('slow');
-  });
+// $('[data-modal=galery]').on('click', function() {
+//     $('.overlay-moda, #galery').fadeIn('slow');
+//   });
+//   $('.modal1__close').on('click', function() {
+//     $('.overlay-moda, #galery').fadeOut('slow');
+//   });
 
   //modal//////////////////////////////////////////////////
   $('[data-modal=consultation]').on('click', function() {
@@ -115,7 +115,7 @@ $('form').submit(function(e) {
   return false; 
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////burger///////////////////////////////////////////////////////////////////////////
 
 window.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.menuAcc'),
@@ -147,64 +147,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-          class GraphAccordion {
-	constructor(selector, options) {
-		let defaultOptions = {
-			isOpen: () => {},
-			isClose: () => {},
-			speed: 300
-		};
-
-		this.options = Object.assign(defaultOptions, options);
-		this.accordion = document.querySelector(selector);
-		this.control = this.accordion.querySelector('.about__btn');
-		this.content = this.accordion.querySelector('.about__content');
-		this.event();
-	}
-
-	event() {
-		console.log('event!');
-		
-		if (this.accordion) {
-			this.accordion.addEventListener('click', (e) => {
-				this.accordion.classList.toggle('open');
-
-				if (this.accordion.classList.contains('open')) {
-					this.open();
-				} else {
-					this.close();
-				}
-			});
-		}
-	}
-
-	open() {
-		this.accordion.style.setProperty('--accordion-time', `${this.options.speed / 1000}s`);
-		this.accordion.classList.add('is-open');
-    this.control.setAttribute('aria-expanded', false);
-		this.content.setAttribute('aria-hidden', true);
-    this.content.style.maxHeight = null;
-		this.options.isOpen(this);
-	}
-
-	close() {
-		this.accordion.classList.remove('is-open');
-    this.control.setAttribute('aria-expanded', true);
-		this.content.setAttribute('aria-hidden', false);
-    this.content.style.maxHeight = this.content.scrollHeight + 'px';
-		this.options.isClose(this);
-	}
-}
-const accordion1 = new GraphAccordion('.accordion', {
-            speed: 500,
-            isOpen: (acc) => {
-              console.log(acc);
-            },
-            isClose: (acc) => {
-              console.log(acc);
-            }
-          });
-
 
 
 ///scrollUp///////////////////////////////////////////////////////
@@ -257,6 +199,7 @@ const btnUp = {
 
   btnUp.addEventListener();  
 
+//////////////////////////////////////////
 
   AOS.init({
     disable: 'phone',
@@ -280,14 +223,14 @@ const btnUp = {
    const lang = this.value;
    if (urls[lang]) { 
      window.location.href = urls[lang]; 
-     localStorage.setItem('lang', this.value);
+     sessionStorage.setItem('lang', this.value);
    } 
  }
- if (localStorage.getItem('lang') == 'en') {
+ if (sessionStorage.getItem('lang') == 'en') {
    changeL.value = 'en';
- } else if (localStorage.getItem('lang') == 'ru') {
+ } else if (sessionStorage.getItem('lang') == 'ru') {
    changeL.value = 'ru';
- } else if (localStorage.getItem('lang') == 'pl') {
+ } else if (sessionStorage.getItem('lang') == 'pl') {
    changeL.value = 'pl';
  };
 
@@ -316,3 +259,19 @@ const btnUp = {
   ]
   });
 });
+
+
+//////////////////Lightbox//////////////////////////////////////Lightbox
+
+document.querySelector('[data-modal=galery]').addEventListener('click', () => {
+  // fsLightboxInstances['gal'].open(0);
+  lightbox.open();
+});
+fsLightboxInstances['gal'].props.onOpen = () => {
+  console.log(fsLightboxInstances)
+};
+const lightbox = new FsLightbox();
+
+// set up props, like sources, types, events etc.
+lightbox.props.sources = ['img/portfolio/1.png', 'img/portfolio/2.png','img/portfolio/3.png','img/portfolio/4.png','img/portfolio/5.png','img/portfolio/6.png','img/portfolio/7.png','img/portfolio/8.png',];
+lightbox.props.onInit = () => console.log('Lightbox initialized!');

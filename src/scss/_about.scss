@@ -1,0 +1,183 @@
+.about {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 400px;
+    padding: 70px 235px 30px 134px;
+    background-color: var(--bg-color);
+    @include _1170 {
+        padding-right: 7%;
+    }
+    @include _979 {
+        padding-left: 7%;
+        padding-top: 60px;
+    }
+    @include _400 {
+        height: 530px;
+    } 
+    
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between !important;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+        @include _767 {
+            min-height: 330px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;  
+        }
+        @include _600 {
+            height: 100%;
+        }   
+        @include _400 {
+            height: 95%;
+        }  
+        img {
+            @include _979 {
+                margin-right: 25px;
+            }
+            @include _767 {
+                margin-bottom: 25px;
+                width: 94px;
+                height: 57px;
+            }
+        }
+    }
+    &__text {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        /* or 27px */
+        max-width: 630px;
+        min-height: 243px;
+        
+        @include _767 {
+            width: 100%;
+        }
+        @include _600 {
+            display: none; 
+        }
+    }
+    
+    &__text-min {
+        display: none;
+        @include _600 {
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            width: 100%;
+            min-height: 216px;
+            position: absolute;
+            top: 91px;
+        }
+        @include _400 {
+            min-height: 216px;
+        }
+    }
+.accordion {
+    display: none;
+    @include _600 {
+        display: block;
+        border: none;    
+    }   
+}
+.accordion-body {
+    background-color: var(--bg-color);
+    color: #2e2a2a;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.accordion-button::after {
+    display: none;
+} 
+.accordion-button {
+    padding-left: 0;
+}
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    background-color: var(--bg-color);
+    border: none;
+    height: 20px;
+    color: black;
+     
+}
+
+    &__btn {
+        display: none;
+        @include _600 {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            border: none;
+            //color: var(--dark-text);
+            background-color: transparent;
+            position: absolute;
+            bottom: 3px;
+            left: -5px; 
+            cursor: pointer;
+        }
+    }
+    &__content {
+        display: none;
+        @include _600 {
+            display: block;
+            font-size: 16px;
+            line-height: 170%;
+            //height: 20px;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 1px;
+            will-change: max-height;
+            transition: all var(--accordion-time) ease-out;
+            transition: transform 0.3s ease-out;
+            box-sizing: content-box;
+            //z-index: 5;
+        }
+    }
+    hr {
+        display: none;
+        @include _600 {
+            display: block;
+            position: absolute;
+            width: 100px;
+            border: 1px solid #D3A265;
+            bottom: 80px;
+            left: 27px;
+        }
+        @include _480 {
+            bottom: 63px;
+            
+        } 
+    }
+
+
+    @include _600 {
+        .open .about__content {
+            opacity: 1;
+            padding: 1px;
+            //margin-top: 10px;
+            overflow: visible;
+            background-color: rgb(231, 231, 231);   
+        }
+    }
+}
+
+.accordion {
+	--accordion-time: 0.3s;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
